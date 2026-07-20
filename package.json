@@ -1,0 +1,38 @@
+{
+  "name": "bet360",
+  "version": "1.0.0",
+  "description": "Full-featured betting platform with casino games and sports betting",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "nodemon --exec node --experimental-modules server.js",
+    "client:dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.1.0",
+    "mongoose": "^7.5.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.5.0",
+    "socket.io": "^4.7.1",
+    "stripe": "^13.6.0",
+    "nodemailer": "^6.9.6",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^7.0.0",
+    "redis": "^4.6.10",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.1",
+    "jest": "^29.7.0"
+  }
+}
